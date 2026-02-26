@@ -1,10 +1,26 @@
-# ManimCE Chinese Notes
+# ManimCE 个人中文笔记
 
-这是我的ManimCE个人中文笔记，同时也是我新建的第一个仓库。
+## 动机
+因为健忘加拖延，我已经看不懂几个月前自己写的代码了。
 
-我把关于这个仓库的内容放在了 [0. 序](0.序.md) 这里。（懒得搬过来README这里了）
+不仅如此，我还没办法把搁置的代码续写下去，只能对着屏幕干瞪眼。
 
----
-Hello, here is my personal notes of ManimCE in Chinese, as well as my first repository in GitHub.
+几个月前囫囵吞枣地过了一遍manimce文档里的示例图库（Example Gallery），就开始着手制作视频了。但由于一些原因，代码~~不出意外地~~被搁置了。现在重新拾起来，却发觉痛苦。这个代码应该怎么用来着？参数这样填会有什么效果？这个功能应该怎么实现？……曾经的记忆如同布满裂纹的雕像，只需轻轻一碰就倒塌了，再也无法回到原本的形状。
 
-I put the introduction of this repository in [0. prologue](0.序.md) . You could read it if you've learnt Chinese.
+所以，我只能重新学习manimce，并认真记笔记。而这个系列，就是我的笔记本。
+
+## 注意
+1. manim有3个大分支，分别是ManimCairo，ManimGL和ManimCE，这个系列使用的是[ManimCE](https://github.com/ManimCommunity/manim)。
+2. 使用的manimce是目前的最新版本，即0.19.2。
+3. 想要读懂这些笔记，可能需要一些Python基础和数学基础。（甚至是manim基础）
+4. 笔记写来**自用**的，因此部分内容不会面面俱到。如果我写的这些内容能帮到你，那真是我的荣幸。
+5. 笔记不包含安装教程，只有使用教程。
+6. 大部分内容摘自官方文档，且尽量给每个英文单词都写上中文翻译。（渣翻致歉）
+7. 我写的内容难免会有错误，如果你发现了错误，请提Issues告诉我。同时也欢迎大佬对这个笔记进行补充。
+8. 笔记内容**持续更新中**。
+9. 镑十五便士
+
+## 参考
+[ManimCE文档](https://docs.manim.community/en/v0.19.2/)
+[博客园wang_yb的博客](https://www.cnblogs.com/wang_yb/collections/31643)
+[ManimKindergarten的wiki](https://github.com/manim-kindergarten/manim_sandbox/wiki)
