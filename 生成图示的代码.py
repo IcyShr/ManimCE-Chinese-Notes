@@ -1,0 +1,99 @@
+from manim import *
+import numpy as np
+"manim -pql 生成图示的代码.py "
+
+
+class GIF_1_1(Scene):
+    def construct(self):
+        circle = Circle(radius=1)
+        text = Text("Hello world.你好世界。")
+
+        self.play(Create(circle))
+        self.play(Write(text))
+        self.wait(1)
+
+
+"图2.1来源于https://docs.manim.community/en/v0.20.0/reference/manim.mobject.geometry.tips.ArrowTip.html"
+
+
+class PNG_2_2(Scene):
+    def construct(self):
+        rect = Rectangle(width=2.0, height=2.0, grid_xstep=1.0, grid_ystep=1.0)
+        rect.grid_lines.set_stroke(width=1)
+        self.add(rect)
+
+
+class PNG_2_3(Scene):
+    def construct(self):
+        vg = VGroup()
+        for i in range(8):
+            vg.add(RegularPolygram(7, density=i))
+        self.add(vg.arrange_in_grid(2, 4, buff=1))
+
+
+"图2.4的代码来源于示例图库"
+
+
+class PNG_3_1(Scene):
+    def construct(self):
+        CONFIG = {
+            "stroke_width": 5,
+            "stroke_color": WHITE,
+            "stroke_opacity": 1,
+            "fill_opacity": 1,
+            "fill_color": color_gradient([PURE_RED, YELLOW], 2),
+        }
+
+        rec = Rectangle(**CONFIG)
+        cir = Circle(1, **CONFIG)
+        tri = Triangle(**CONFIG)
+        squ = Square(**CONFIG)
+
+        self.add(Group(rec, cir, tri, squ).arrange())
+
+
+class PNG_3_2(Scene):
+    def construct(self):
+        vg = VGroup()
+        arr = Arrow(DOWN, UP).scale(2, scale_tips=True)
+
+        vg.add(arr.copy())
+        vg.add(arr.copy().set_stroke(color=BLUE))
+        vg.add(arr.copy().set_stroke(color=BLUE, width=20))
+        vg.add(arr.copy().set_stroke(color=BLUE, width=20, opacity=0.5))
+        vg.add(arr.copy().set_stroke(color=BLUE, width=20, opacity=0.5, background=True))
+        vg.add(arr.copy().set_stroke(color=BLUE, width=20, opacity=0.5, background=True, family=False))
+
+        self.add(vg.arrange(buff=1.5))
+
+
+class PNG_3_3(Scene):
+    def construct(self):
+        tri = Triangle(color=YELLOW)
+        cir = Circle(1).set_color('#00ff00')
+        squ = Square().set_color([RED, BLUE])
+
+        self.add(VGroup(tri, cir, squ).arrange())
+
+
+class PNG_3_4(Scene):
+    def construct(self):
+        squ = Square().set_fill(opacity=1).set_color(BLUE)
+        squ1 = squ.copy().set_sheen(0.8, DR)
+        squ2 = squ1.copy().set_sheen_direction(RIGHT)
+        squ3 = squ2.copy().set_color([RED, YELLOW])
+
+        self.add(VGroup(squ1, squ2, squ3).arrange(buff=1.5))
+
+
+class PNG_3_5(Scene):
+    def construct(self):
+        vg = VGroup()
+        for i in range(36):
+            vg.add(Square(0.5).set_color(BLUE).set_fill(opacity=1))
+        vg.arrange_in_grid(rows=6, cols=6, buff=0.3)
+        
+        vg.set_color_by_gradient(GREEN, RED, BLUE)
+        vg1 = vg.copy().set_colors_by_radial_gradient(radius=3)
+
+        self.add(VGroup(vg, vg1).arrange(buff=1))
