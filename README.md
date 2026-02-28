@@ -24,6 +24,7 @@
 - [1. 从渲染开始](./1.start_from_rendering.md)
 - [2. 基本几何图形](./2.basic_geometric_figures.md)
 - [3. 图形样貌](./3.appearance_of_figure.md)
+- [4. 运动与对齐](./4.movement_and_alignment.md)
 
 ## 参考
 [ManimCE文档](https://docs.manim.community/en/v0.20.0/)

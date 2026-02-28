@@ -131,3 +131,47 @@ class PNG_4_1(Scene):
 "图4.2来源于互联网"
 
 
+class PNG_4_3(Scene):
+    def construct(self):
+        A = VGroup(
+            *[MathTex(r"A_"+str(i)).set_stroke(width=1) for i in range(5)]
+        ).arrange(buff=0.5)
+        B = VGroup(
+            *[MathTex(r"B_"+str(i)).set_stroke(width=1) for i in range(3)]
+        ).arrange(buff=0.5)
+
+        B.next_to(A, DOWN, aligned_edge=LEFT, 
+                  submobject_to_align=B[1], 
+                  index_of_submobject_to_align=2)
+
+        self.add(A, B)
+
+
+class PNG_4_4(Scene):
+    def construct(self):
+        boxes = VGroup(*[Square(2-0.2*s) for s in range(0,6)])
+        boxes.arrange_in_grid(rows=2, buff=0.3)
+        self.add(boxes)
+
+
+class PNG_4_5(Scene):
+    def construct(self):
+        boxes=VGroup(*[Square(2-0.2*s) for s in range(0,6)])
+        boxes.arrange_in_grid(
+            rows=2,
+            buff=0.3,
+            cell_alignment=UL,
+        )
+        self.add(boxes)
+
+
+class PNG_4_6(Scene):
+    def construct(self):
+        boxes=VGroup(*[Square(2-0.2*s) for s in range(0,6)])
+        boxes.arrange_in_grid(
+            rows=2,
+            buff=(0.3, 1),
+            cell_alignment=UL,
+            flow_order="lu",
+        )
+        self.add(boxes)
