@@ -13,7 +13,7 @@ class GIF_1_1(Scene):
         self.wait(1)
 
 
-"图2.1来源于https://docs.manim.community/en/v0.20.0/reference/manim.mobject.geometry.tips.ArrowTip.html"
+"图2.1来源于https://docs.manim.community/en/v0.20.1/reference/manim.mobject.geometry.tips.ArrowTip.html"
 
 
 class PNG_2_2(Scene):
