@@ -97,3 +97,37 @@ class PNG_3_5(Scene):
         vg1 = vg.copy().set_colors_by_radial_gradient(radius=3)
 
         self.add(VGroup(vg, vg1).arrange(buff=1))
+
+
+class PNG_3_6(Scene):
+    def construct(self):
+        arc = Arc(radius=2, angle=PI/2).set_color(GREEN).set_stroke(width=20)
+
+        arc_1 = arc.copy().set_cap_style(CapStyleType.AUTO)
+        arc_2 = arc.copy().set_cap_style(CapStyleType.ROUND)
+        arc_3 = arc.copy().set_cap_style(CapStyleType.BUTT)
+        arc_4 = arc.copy().set_cap_style(CapStyleType.SQUARE)
+
+        self.add(VGroup(arc_1, arc_2, arc_3, arc_4).arrange(buff=1))
+
+
+class PNG_3_7(Scene):
+    def construct(self):
+        tri = Triangle().set_stroke(width=10).scale(1.5, scale_stroke=True)
+        
+        tri_1 = tri.copy().set_joint_type(LineJointType.AUTO)
+        tri_2 = tri.copy().set_joint_type(LineJointType.ROUND)
+        tri_3 = tri.copy().set_joint_type(LineJointType.BEVEL)
+        tri_4 = tri.copy().set_joint_type(LineJointType.MITER)
+        
+        self.add(VGroup(tri_1, tri_2, tri_3, tri_4).arrange(buff=1))
+
+
+class PNG_4_1(Scene):
+    def construct(self):
+        self.add(NumberPlane().add_coordinates())
+
+
+"图4.2来源于互联网"
+
+
